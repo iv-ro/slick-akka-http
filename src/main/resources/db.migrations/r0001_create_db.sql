@@ -1,0 +1,22 @@
+CREATE ROLE restapp WITH
+  NOLOGIN
+  NOSUPERUSER
+  INHERIT
+  NOCREATEDB
+  CREATEROLE
+  NOREPLICATION;
+
+CREATE DATABASE restserver
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+GRANT ALL ON DATABASE restserver TO postgres;
+
+GRANT ALL ON DATABASE restserver TO restapp;
+
+GRANT TEMPORARY, CONNECT ON DATABASE restserver TO PUBLIC;
