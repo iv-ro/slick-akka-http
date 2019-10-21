@@ -8,7 +8,7 @@
 ```
 curl --header "Content-Type: application/json"\
   --request POST\
-     --data '{"firstName":"john","lastName":"doe","address":"testAddress","birthDate":"2019-05-31"}'\
+     --data '{"firstName":"john","lastName":"doe","address":"testAddress","birthDate":"2019-05-20"}'\
         http://localhost:8888/api/v1.0/user
 ```
 #### Update user
@@ -18,7 +18,7 @@ ${id} - id of user
 ```
 curl --header "Content-Type: application/json" \ 
     --request PUT \
-    --data '{"firstName":"john","lastName":"doe","address":"testAddress2","birthDate":"2019-05-31"}' \
+    --data '{"firstName":"john","lastName":"doe","address":"testAddress2","birthDate":"2019-05-20"}' \
      http://localhost:8888/api/v1.0/user?id=${id}
 ```
 
