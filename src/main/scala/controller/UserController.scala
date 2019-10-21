@@ -44,7 +44,7 @@ class UserController(userRepository: UserRepository) extends Controller
     }
     } ~ path("list") {
       get {
-        parameters("limit".as[Int] ? 10, "offset".as[Int] ? 0, "sortBy" ? "lastName") {
+        parameters("limit".as[Int] ? 10, "offset".as[Int] ? 0, "sortBy" ? "lastName") { // should use pagination
           (limit, offset, sortBy) =>
             handle(userRepository.list(limit, offset, sortBy))(ApiSuccess.ok)(success => complete(success.statusCode, success.data))
         }
