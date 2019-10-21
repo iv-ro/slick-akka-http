@@ -1,6 +1,6 @@
 ## Running
 1. Execute SQL migrations: create db, create user.\
-```sbt run```
+2. ```sbt run```
 ## Using
 #### Create user
 
